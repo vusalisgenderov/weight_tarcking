@@ -23,3 +23,8 @@ class UserIsExists(DetailHTTPException):
     STATUS_CODE=status.HTTP_406_NOT_ACCEPTABLE
     DETAIL = "User is exists"
 
+class UserNotWeight(DetailHTTPException):
+    STATUS_CODE = status.HTTP_404_NOT_FOUND
+    DETAIL = "your weight havn't in base"
+
+

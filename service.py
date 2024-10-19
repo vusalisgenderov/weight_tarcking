@@ -10,7 +10,7 @@ def get_current_weight(*,username:str,db:Session):
     user=db.query(Weight).filter_by(username=username).all()
 
     if not user:
-        raise UserNottFoundException()
+        raise UserNotWeight()
     ls=[]
     for i in user:
         ls.append(i.date)
